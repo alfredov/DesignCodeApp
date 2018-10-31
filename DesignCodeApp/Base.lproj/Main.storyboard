@@ -55,6 +55,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyB-ie-hTG">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <state key="normal" image="Action-Play-Small"/>
+                                                            <connections>
+                                                                <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u92-U3-mQW"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -295,6 +298,11 @@
                         <viewLayoutGuide key="safeArea" id="p6y-qF-5yT"/>
                     </view>
                     <size key="freeformSize" width="414" height="2000"/>
+                    <connections>
+                        <outlet property="deviceImageView" destination="Sgb-BU-nmX" id="Vvx-zy-Pen"/>
+                        <outlet property="playVisualView" destination="Qi9-AR-P8Z" id="HEb-dQ-6pp"/>
+                        <outlet property="titleLabel" destination="etj-iJ-LPO" id="auB-5v-j9W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
