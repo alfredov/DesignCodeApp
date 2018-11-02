@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38052D82218C874E00FAD726 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38052D81218C874E00FAD726 /* Data.swift */; };
+		38052D84218C96DF00FAD726 /* SectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38052D83218C96DF00FAD726 /* SectionCollectionViewCell.swift */; };
 		388DA61521812DD300890E01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388DA61421812DD300890E01 /* AppDelegate.swift */; };
 		388DA61721812DD300890E01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388DA61621812DD300890E01 /* ViewController.swift */; };
 		388DA61A21812DD300890E01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388DA61821812DD300890E01 /* Main.storyboard */; };
 		388DA61D21812DD300890E01 /* DesignCodeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 388DA61B21812DD300890E01 /* DesignCodeApp.xcdatamodeld */; };
 		388DA61F21812DD400890E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388DA61E21812DD400890E01 /* Assets.xcassets */; };
 		388DA62221812DD400890E01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388DA62021812DD400890E01 /* LaunchScreen.storyboard */; };
+		3899B487218A1395004B22E7 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3899B486218A1395004B22E7 /* SectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38052D81218C874E00FAD726 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		38052D83218C96DF00FAD726 /* SectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		388DA61121812DD300890E01 /* DesignCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388DA61421812DD300890E01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		388DA61621812DD300890E01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		388DA61E21812DD400890E01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		388DA62121812DD400890E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		388DA62321812DD400890E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3899B486218A1395004B22E7 /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			children = (
 				388DA61421812DD300890E01 /* AppDelegate.swift */,
 				388DA61621812DD300890E01 /* ViewController.swift */,
+				38052D81218C874E00FAD726 /* Data.swift */,
+				38052D83218C96DF00FAD726 /* SectionCollectionViewCell.swift */,
+				3899B486218A1395004B22E7 /* SectionViewController.swift */,
 				388DA61821812DD300890E01 /* Main.storyboard */,
 				388DA61E21812DD400890E01 /* Assets.xcassets */,
 				388DA62021812DD400890E01 /* LaunchScreen.storyboard */,
@@ -139,7 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				388DA61721812DD300890E01 /* ViewController.swift in Sources */,
+				38052D82218C874E00FAD726 /* Data.swift in Sources */,
 				388DA61521812DD300890E01 /* AppDelegate.swift in Sources */,
+				3899B487218A1395004B22E7 /* SectionViewController.swift in Sources */,
+				38052D84218C96DF00FAD726 /* SectionCollectionViewCell.swift in Sources */,
 				388DA61D21812DD300890E01 /* DesignCodeApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

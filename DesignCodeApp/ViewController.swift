@@ -14,9 +14,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deviceImageView: UIImageView!
     @IBOutlet weak var playVisualView: UIVisualEffectView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var heroView: UIView!
+    @IBOutlet weak var bookView: UIView!
+    @IBOutlet weak var chapterCollectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.delegate = self
+        chapterCollectionView.delegate = self
+        chapterCollectionView.dataSource = self
+        
         self.titleLabel.alpha = 0
         deviceImageView.alpha = 0
         playVisualView.alpha = 0
@@ -39,5 +50,35 @@ class ViewController: UIViewController {
         }
     }
     
+}
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return sections.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sectionCell", for: indexPath) as! SectionCollectionViewCell
+        let section: [String: String] = sections[indexPath.row]
+        cell.titleLabel.text = section["title"]
+        cell.captionLabel.text = section["caption"]
+        cell.coverimageView.image = UIImage(named: section["image"]!)
+        return cell
+    }
+    
+    
+}
+
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        if offsetY < 0 {
+            heroView.transform = CGAffineTransform(translationX: 0, y: offsetY)
+            playVisualView.transform = CGAffineTransform(translationX: 0, y: -offsetY/3)
+            titleLabel.transform = CGAffineTransform(translationX: 0, y: -offsetY/3)
+            deviceImageView.transform = CGAffineTransform(translationX: 0, y: -offsetY/4)
+            backgroundImageView.transform = CGAffineTransform(translationX: 0, y: -offsetY/5)
+        }
+    }
 }
 
