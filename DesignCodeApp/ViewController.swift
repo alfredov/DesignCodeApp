@@ -38,7 +38,18 @@ class ViewController: UIViewController {
             self.playVisualView.alpha = 1
         }
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeToSection" {
+            let toViewController = segue.destination as! SectionViewController
+            let indexPath = sender as! IndexPath
+            let section = sections[indexPath.row]
+            toViewController.section = section
+            toViewController.sections = sections
+            toViewController.indexPath = indexPath
+        }
+    }
+    
     @IBAction func playButtonTapped(_ sender: Any) {
         let urlString = "https://player.vimeo.com/external/235468301.hd.mp4?s=e852004d6a46ce569fcf6ef02a7d291ea581358e&profile_id=175"
         let url = URL(string: urlString)
@@ -68,6 +79,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "HomeToSection", sender: indexPath)
+    }
     
 }
 
