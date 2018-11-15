@@ -14,13 +14,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var deviceImageView: UIImageView!
     @IBOutlet weak var playVisualEffectView: UIVisualEffectView!
     @IBOutlet weak var chapterCollectionView: UICollectionView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         chapterCollectionView.dataSource = self
         chapterCollectionView.delegate = self
-
+        scrollView.delegate = self
+        
         titleLabel.alpha = 0
         deviceImageView.alpha = 0
         playVisualEffectView.alpha = 0
@@ -30,6 +32,8 @@ class HomeViewController: UIViewController {
             self.deviceImageView.alpha = 1
             self.playVisualEffectView.alpha = 1
         }
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -77,4 +81,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     
+}
+
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsety = scrollView.contentOffset.y
+        let navigationIsHidden = offsety <= 0
+        navigationController?.setNavigationBarHidden(navigationIsHidden, animated: true)
+    }
 }
