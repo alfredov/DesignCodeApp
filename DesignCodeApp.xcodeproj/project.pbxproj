@@ -17,6 +17,7 @@
 		38D7B70A22222C8D0080EF5F /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D7B70922222C8D0080EF5F /* Exercises.storyboard */; };
 		38D7B70C22222CD50080EF5F /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D7B70B22222CD50080EF5F /* More.storyboard */; };
 		38D7B70F22222D290080EF5F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D7B70E22222D290080EF5F /* Home.storyboard */; };
+		38D7B71322223B6F0080EF5F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 38D7B71222223B6F0080EF5F /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		38D7B70922222C8D0080EF5F /* Exercises.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Exercises.storyboard; sourceTree = "<group>"; };
 		38D7B70B22222CD50080EF5F /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		38D7B70E22222D290080EF5F /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		38D7B71222223B6F0080EF5F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		388DA60821812DD300890E01 = {
 			isa = PBXGroup;
 			children = (
+				38D7B71222223B6F0080EF5F /* README.md */,
 				388DA61321812DD300890E01 /* DesignCodeApp */,
 				388DA61221812DD300890E01 /* Products */,
 			);
@@ -223,6 +226,7 @@
 				38D7B70822222C180080EF5F /* BookMarks.storyboard in Resources */,
 				388DA62221812DD400890E01 /* LaunchScreen.storyboard in Resources */,
 				38D7B70A22222C8D0080EF5F /* Exercises.storyboard in Resources */,
+				38D7B71322223B6F0080EF5F /* README.md in Resources */,
 				388DA61F21812DD400890E01 /* Assets.xcassets in Resources */,
 				38D7B70F22222D290080EF5F /* Home.storyboard in Resources */,
 			);
