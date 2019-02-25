@@ -18,6 +18,7 @@
 		38D7B70C22222CD50080EF5F /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D7B70B22222CD50080EF5F /* More.storyboard */; };
 		38D7B70F22222D290080EF5F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D7B70E22222D290080EF5F /* Home.storyboard */; };
 		38D7B71322223B6F0080EF5F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 38D7B71222223B6F0080EF5F /* README.md */; };
+		38EABC9B22243119008352A0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38EABC9A22243119008352A0 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		38D7B70B22222CD50080EF5F /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		38D7B70E22222D290080EF5F /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		38D7B71222223B6F0080EF5F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		38EABC9A22243119008352A0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		388DA61321812DD300890E01 /* DesignCodeApp */ = {
 			isa = PBXGroup;
 			children = (
+				38EABC99222430E5008352A0 /* Resources */,
 				38D7B6FE222228090080EF5F /* Application */,
 				38D7B6FB222227A80080EF5F /* Base */,
 				388DA61B21812DD300890E01 /* DesignCodeApp.xcdatamodeld */,
@@ -85,8 +88,6 @@
 		38D7B6FB222227A80080EF5F /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				38D7B6FD222227D30080EF5F /* Colors */,
-				38D7B6FC222227C70080EF5F /* Images */,
 				388DA62021812DD400890E01 /* LaunchScreen.storyboard */,
 				388DA62321812DD400890E01 /* Info.plist */,
 				388DA61421812DD300890E01 /* AppDelegate.swift */,
@@ -105,6 +106,7 @@
 		38D7B6FD222227D30080EF5F /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				38EABC9A22243119008352A0 /* Colors.xcassets */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -160,6 +162,15 @@
 				38D7B70E22222D290080EF5F /* Home.storyboard */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		38EABC99222430E5008352A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38D7B6FC222227C70080EF5F /* Images */,
+				38D7B6FD222227D30080EF5F /* Colors */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +236,7 @@
 				38D7B70C22222CD50080EF5F /* More.storyboard in Resources */,
 				38D7B70822222C180080EF5F /* BookMarks.storyboard in Resources */,
 				388DA62221812DD400890E01 /* LaunchScreen.storyboard in Resources */,
+				38EABC9B22243119008352A0 /* Colors.xcassets in Resources */,
 				38D7B70A22222C8D0080EF5F /* Exercises.storyboard in Resources */,
 				38D7B71322223B6F0080EF5F /* README.md in Resources */,
 				388DA61F21812DD400890E01 /* Assets.xcassets in Resources */,
