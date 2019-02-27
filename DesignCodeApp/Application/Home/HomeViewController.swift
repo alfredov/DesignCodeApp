@@ -13,9 +13,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deviceImageView: UIImageView!
     @IBOutlet weak var playVisualEffectView: UIVisualEffectView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var heroView: UIView!
+    @IBOutlet weak var bookView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.delegate = self
         
         titleLabel.alpha = 0
         deviceImageView.alpha = 0
@@ -38,6 +44,19 @@ class HomeViewController: UIViewController {
         playerController.player = player
         present(playerController, animated: true) {
             player.play()
+        }
+    }
+}
+
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        if offsetY < 0 {
+            heroView.transform = CGAffineTransform(translationX: 0, y: offsetY)
+            playVisualEffectView.transform = CGAffineTransform(translationX: 0, y: -offsetY / 3)
+            titleLabel.transform = CGAffineTransform(translationX: 0, y: -offsetY / 3)
+            deviceImageView.transform = CGAffineTransform(translationX: 0, y: -offsetY / 4)
+            backgroundImageView.transform = CGAffineTransform(translationX: 0, y: -offsetY / 5)
         }
     }
 }
