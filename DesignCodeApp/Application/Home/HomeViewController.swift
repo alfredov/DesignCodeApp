@@ -19,9 +19,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var bookView: UIView!
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     
+    private var chaptersViewModel = ChaptersViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         scrollView.delegate = self
         chapterCollectionView.dataSource = self
         
@@ -65,12 +67,13 @@ extension HomeViewController: UIScrollViewDelegate {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return chaptersViewModel.numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ChapterCollectionViewCell
+        cell.viewModel = chaptersViewModel.item(indexPath: indexPath)
+        return cell
     }
-    
-    
 }
