@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3809058E22288C450060771E /* TestimonialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809058D22288C450060771E /* TestimonialCollectionViewCell.swift */; };
+		38346DE7222833200076182B /* TestimonialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38346DE6222833200076182B /* TestimonialViewController.swift */; };
 		388DA61521812DD300890E01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388DA61421812DD300890E01 /* AppDelegate.swift */; };
 		388DA61D21812DD300890E01 /* DesignCodeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 388DA61B21812DD300890E01 /* DesignCodeApp.xcdatamodeld */; };
 		388DA61F21812DD400890E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388DA61E21812DD400890E01 /* Assets.xcassets */; };
@@ -22,10 +24,14 @@
 		38E3E7592226E85C0090EA9F /* ChaptersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E3E7582226E85C0090EA9F /* ChaptersViewModel.swift */; };
 		38E3E75B2226EEB60090EA9F /* chapters.json in Resources */ = {isa = PBXBuildFile; fileRef = 38E3E75A2226EEB60090EA9F /* chapters.json */; };
 		38E3E75D222715D20090EA9F /* ChapterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E3E75C222715D20090EA9F /* ChapterCollectionViewCell.swift */; };
+		38E9668122286B3200F79371 /* testimonials.json in Resources */ = {isa = PBXBuildFile; fileRef = 38E9668022286B3200F79371 /* testimonials.json */; };
+		38E9668322286B6700F79371 /* TestimonialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9668222286B6700F79371 /* TestimonialsViewModel.swift */; };
 		38EABC9B22243119008352A0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38EABC9A22243119008352A0 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3809058D22288C450060771E /* TestimonialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialCollectionViewCell.swift; sourceTree = "<group>"; };
+		38346DE6222833200076182B /* TestimonialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialViewController.swift; sourceTree = "<group>"; };
 		388DA61121812DD300890E01 /* DesignCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388DA61421812DD300890E01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		388DA61C21812DD300890E01 /* DesignCodeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DesignCodeApp.xcdatamodel; sourceTree = "<group>"; };
@@ -43,6 +49,8 @@
 		38E3E7582226E85C0090EA9F /* ChaptersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewModel.swift; sourceTree = "<group>"; };
 		38E3E75A2226EEB60090EA9F /* chapters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapters.json; sourceTree = "<group>"; };
 		38E3E75C222715D20090EA9F /* ChapterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCollectionViewCell.swift; sourceTree = "<group>"; };
+		38E9668022286B3200F79371 /* testimonials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testimonials.json; sourceTree = "<group>"; };
+		38E9668222286B6700F79371 /* TestimonialsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsViewModel.swift; sourceTree = "<group>"; };
 		38EABC9A22243119008352A0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +65,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38346DEA22283F860076182B /* Chapters */ = {
+			isa = PBXGroup;
+			children = (
+				38E3E7582226E85C0090EA9F /* ChaptersViewModel.swift */,
+				38E3E75A2226EEB60090EA9F /* chapters.json */,
+				38E3E75C222715D20090EA9F /* ChapterCollectionViewCell.swift */,
+			);
+			path = Chapters;
+			sourceTree = "<group>";
+		};
+		38346DEB22283F920076182B /* Testimonials */ = {
+			isa = PBXGroup;
+			children = (
+				38346DE6222833200076182B /* TestimonialViewController.swift */,
+				38E9668022286B3200F79371 /* testimonials.json */,
+				38E9668222286B6700F79371 /* TestimonialsViewModel.swift */,
+				3809058D22288C450060771E /* TestimonialCollectionViewCell.swift */,
+			);
+			path = Testimonials;
+			sourceTree = "<group>";
+		};
 		388DA60821812DD300890E01 = {
 			isa = PBXGroup;
 			children = (
@@ -167,11 +196,10 @@
 		38D7B70D22222D120080EF5F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				38346DEB22283F920076182B /* Testimonials */,
+				38346DEA22283F860076182B /* Chapters */,
 				38D7B70E22222D290080EF5F /* Home.storyboard */,
 				38BA712B22260AF400F09C16 /* HomeViewController.swift */,
-				38E3E7582226E85C0090EA9F /* ChaptersViewModel.swift */,
-				38E3E75A2226EEB60090EA9F /* chapters.json */,
-				38E3E75C222715D20090EA9F /* ChapterCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -244,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38D7B70622222B4A0080EF5F /* Chapters.storyboard in Resources */,
+				38E9668122286B3200F79371 /* testimonials.json in Resources */,
 				38D7B704222229530080EF5F /* Main.storyboard in Resources */,
 				38D7B70C22222CD50080EF5F /* More.storyboard in Resources */,
 				38D7B70822222C180080EF5F /* BookMarks.storyboard in Resources */,
@@ -266,8 +295,11 @@
 			files = (
 				38E3E7592226E85C0090EA9F /* ChaptersViewModel.swift in Sources */,
 				38E3E75D222715D20090EA9F /* ChapterCollectionViewCell.swift in Sources */,
+				38346DE7222833200076182B /* TestimonialViewController.swift in Sources */,
+				38E9668322286B6700F79371 /* TestimonialsViewModel.swift in Sources */,
 				388DA61521812DD300890E01 /* AppDelegate.swift in Sources */,
 				388DA61D21812DD300890E01 /* DesignCodeApp.xcdatamodeld in Sources */,
+				3809058E22288C450060771E /* TestimonialCollectionViewCell.swift in Sources */,
 				38BA712C22260AF400F09C16 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
