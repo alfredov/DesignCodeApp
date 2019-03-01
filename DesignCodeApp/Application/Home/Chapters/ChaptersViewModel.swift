@@ -37,13 +37,18 @@ class ChaptersViewModel {
     }
     
     func item(indexPath: IndexPath) -> ChapterViewModel {
-        return ChapterViewModel(chapter: items[indexPath.row])
+        return ChapterViewModel(
+            chapter: items[indexPath.row],
+            progress: "\(indexPath.row + 1) / \(items.count)"
+        )
     }
     
 }
 
 class ChapterViewModel {
     private var chapter: Chapter
+    
+    var progress: String
     
     var title: String {
         return chapter.title
@@ -61,7 +66,8 @@ class ChapterViewModel {
         return chapter.image
     }
     
-    init(chapter: Chapter) {
+    init(chapter: Chapter, progress: String) {
         self.chapter = chapter
+        self.progress = progress
     }
 }

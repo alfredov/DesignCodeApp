@@ -462,11 +462,20 @@
                         <outlet property="playVisualEffectView" destination="c8x-17-SoY" id="MEz-L2-tas"/>
                         <outlet property="scrollView" destination="bqd-O9-n0T" id="4ga-eH-bTN"/>
                         <outlet property="titleLabel" destination="Hjq-86-gV4" id="BdR-g5-XWI"/>
+                        <segue destination="c5T-4o-nzb" kind="presentation" identifier="HomeToChapterDetail" id="ydH-T1-C16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzR-gl-vgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-649.27536231884062" y="899.33035714285711"/>
+        </scene>
+        <!--ChapterDetail-->
+        <scene sceneID="Bql-dh-R2B">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChapterDetail" id="c5T-4o-nzb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kko-hL-1Fj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104" y="768"/>
         </scene>
         <!--Testimonial View Controller-->
         <scene sceneID="YqY-vx-Wh7">
@@ -660,12 +669,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1BT-d6-Pt8" firstAttribute="leading" secondItem="hkg-lc-Lk9" secondAttribute="leading" id="4hm-2d-3z2"/>
+                            <constraint firstItem="1BT-d6-Pt8" firstAttribute="leading" secondItem="bFE-uu-fsa" secondAttribute="leading" id="4hm-2d-3z2"/>
                             <constraint firstItem="1BT-d6-Pt8" firstAttribute="top" secondItem="bFE-uu-fsa" secondAttribute="top" id="CvJ-Sa-CjL"/>
-                            <constraint firstItem="1BT-d6-Pt8" firstAttribute="trailing" secondItem="hkg-lc-Lk9" secondAttribute="trailing" id="nxD-qy-acZ"/>
+                            <constraint firstItem="1BT-d6-Pt8" firstAttribute="trailing" secondItem="bFE-uu-fsa" secondAttribute="trailing" id="nxD-qy-acZ"/>
                             <constraint firstAttribute="bottom" secondItem="1BT-d6-Pt8" secondAttribute="bottom" id="wUD-6m-h3K"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hkg-lc-Lk9"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="0aF-sL-B9E" id="6aa-VJ-aUy"/>

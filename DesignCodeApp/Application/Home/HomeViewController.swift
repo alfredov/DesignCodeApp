@@ -51,6 +51,14 @@ class HomeViewController: UIViewController {
             player.play()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier, identifier == "HomeToChapterDetail" {
+            let toViewController = segue.destination as! ChapterDetailViewController
+            let indexPath = sender as! IndexPath
+            toViewController.viewModel = chaptersViewModel.item(indexPath: indexPath)
+        }
+    }
 }
 
 extension HomeViewController: UIScrollViewDelegate {
@@ -111,5 +119,9 @@ extension HomeViewController: UICollectionViewDelegate ,UICollectionViewDataSour
         cell.viewModel = chaptersViewModel.item(indexPath: indexPath)
         cell.layer.transform = animateCell(cellFrame: cell.frame)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "HomeToChapterDetail", sender: indexPath)
     }
 }
