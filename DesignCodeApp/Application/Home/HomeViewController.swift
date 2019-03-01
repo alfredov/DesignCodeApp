@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     
     private var chaptersViewModel = ChaptersViewModel()
+    var isStatusBarHidden = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +32,45 @@ class HomeViewController: UIViewController {
         titleLabel.alpha = 0
         deviceImageView.alpha = 0
         playVisualEffectView.alpha = 0
+        setStatusBarBackgroundColor(color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 0.1))
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         UIView.animate(withDuration: 1) {
             self.titleLabel.alpha = 1
             self.deviceImageView.alpha = 1
             self.playVisualEffectView.alpha = 1
         }
+        isStatusBarHidden = false
+        UIView.animate(withDuration: 0.5) {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
+    }
+    
+    func setStatusBarBackgroundColor(color: UIColor) {
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+        statusBar.backgroundColor = color
+    }
+    
+    func addBlurStatusBar() {
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        let blur = UIBlurEffect(style: .light)
+        let blurStatusBar = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: statusBarHeight))
+        blurStatusBar.effect = blur
+        view.addSubview(blurStatusBar)
     }
     
     @IBAction func playButtonTapped(_ sender: UIButton) {
@@ -57,6 +89,11 @@ class HomeViewController: UIViewController {
             let toViewController = segue.destination as! ChapterDetailViewController
             let indexPath = sender as! IndexPath
             toViewController.viewModel = chaptersViewModel.item(indexPath: indexPath)
+            
+            isStatusBarHidden = true
+            UIView.animate(withDuration: 0.5) {
+                self.setNeedsStatusBarAppearanceUpdate()
+            }
         }
     }
 }

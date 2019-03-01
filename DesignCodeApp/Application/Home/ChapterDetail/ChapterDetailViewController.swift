@@ -26,6 +26,10 @@ class ChapterDetailViewController: UIViewController {
         bodyLabel.text = viewModel.body
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     @IBAction func closeButtonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
